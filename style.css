@@ -148,6 +148,7 @@ header .bottom-nav {
     background-color: #e6e9eb;
     display: grid;
     grid-template-columns: 3fr 1fr;
+    box-shadow: inset 0 5px 10px -2px gray
 }
 
 img#profile-picture {
@@ -165,7 +166,7 @@ img#profile-picture {
     padding: 1rem;
     padding-right: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 48%));
+    grid-template-columns: repeat(auto-fill, minmax(20px, 48%));
     grid-template-rows: 50px repeat(auto-fill, minmax(50px, 20%));
     gap: 1rem;
 }
@@ -182,6 +183,7 @@ img#profile-picture {
     padding: 2rem;
     background-color: #f5fbff;
     border-radius: 10px;
+    box-shadow: 4px 4px 5px 0px gray;
 }
 
 .card .texts h4 {
@@ -196,6 +198,10 @@ img#profile-picture {
     align-self: flex-end;
 }
 
+.icons img {
+    margin-left: 0.5rem;
+}
+
 .timeline {
     display: grid;
     grid-template-rows: 60px 1fr 60px 1fr;
@@ -204,17 +210,17 @@ img#profile-picture {
 .announcements {
     background-color: #f5fbff;
     height: 500px;
-    width: 80%;
-    margin-left: 1rem;
+    width: 90%;
     margin-top: 1rem;
     border-radius: 10px;
+    box-shadow: 4px 4px 5px 0px gray;
 }
 
 .trending {
     background-color: #f5fbff;
     height: 400px;
-    width: 80%;
-    margin-left: 1rem;
+    width: 90%;
     margin-top: 1rem;
     border-radius: 10px;
+    box-shadow: 4px 4px 5px 0px gray;
 }
