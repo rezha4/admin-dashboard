@@ -1,15 +1,17 @@
 body, html {
-    height: 100%;
+    min-height: 100vh;
     margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .main-container {
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: minmax(0px, 1fr) minmax(800px, 5fr);
 }
 
 aside {
+    padding-top: 1rem;
     background-color: #1992d4;
     padding-left: 2rem;
     display: flex;
@@ -17,11 +19,20 @@ aside {
     gap: 5rem;
 }
 
+aside img {
+    height: auto;
+    width: 30px;
+}
+
+#logo {
+    height: auto;
+    width: 50px;
+}
+
 .sidebar button {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: xx-large;
     background-color: transparent;
     border: none;
     color: #f5fbff;
@@ -32,25 +43,153 @@ aside {
     display: flex;
     background-color: transparent;
     border: none;
-    color: #f5fbff;;
-    font-size: larger;
+    color: #f5fbff;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 button:hover {
-    background-color: rgb(245, 251, 255, 10%);
+    transform: scale(1.05);
+    transition: all 0.1s ease;
+}
+
+button:active {
+    transform: scale(1.15);
+    transition: all 0.1s ease;
 }
 
 .main-content {
     display: grid;
-    grid-template-rows: 1fr 4fr;
+    height: 100vh;
+    grid-template-rows: 20% 80%;
 }
 
 header {
+    padding: 1rem 2rem;
     background-color: #f5fbff;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    gap: 2rem;
+}
+
+header .top-nav {
+    grid-row: 1 / 2;
+}
+
+header .bottom-nav {
+    grid-row: 2 / 3;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-area {
+    display: flex;
+    gap: 2rem;
+}
+
+.profile-bar {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.search-bar img {
+    width: auto;
+    height: 30px;
+}
+
+.search-bar button {
+    background-color: transparent;
+    border: none;
+}
+
+.search-bar input {
+    width: 500px;
+    height: 2rem;
+    border: none;
+    background-color: #e6e9eb;
+    border-radius: 20px;
+}
+
+.bottom-nav  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-badge {
+    display: flex;
+    line-height: 0;
+    align-items: center;
+    gap: 1rem;
+}
+
+.share-buttons {
+    display: flex;
+    gap: 2rem;
+}
+
+.share-buttons button {
+    color: #f5fbff;
+    font-weight: bold;
+    font-size: larger;
+    background-color: #1992d4;
+    border: none;
+    border-radius: 50px;
+    width: 150px;
+    height: 50px;
 }
 
 .main-content main {
     background-color: #e6e9eb;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+img#profile-picture {
+    width: auto;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.profile-badge img#profile-picture {
+    width: auto;
+    height: 70px;
+}
+
+.project-cards {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 40%));
+    grid-template-rows: 50px repeat(auto-fit, minmax(50px, 20%));
+    gap: 1rem;
+}
+
+.project-cards h1 {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+}
+
+.project-cards .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #f5fbff;
+}
+
+.card .texts h4 {
+    margin: 0;
+}
+
+.card .texts p {
+    margin: 0;
+}
+
+.card .icons {
+    align-self: flex-end;
 }
