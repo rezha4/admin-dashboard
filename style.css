@@ -163,9 +163,10 @@ img#profile-picture {
 
 .project-cards {
     padding: 1rem;
+    padding-right: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 40%));
-    grid-template-rows: 50px repeat(auto-fit, minmax(50px, 20%));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 48%));
+    grid-template-rows: 50px repeat(auto-fill, minmax(50px, 20%));
     gap: 1rem;
 }
 
@@ -180,6 +181,7 @@ img#profile-picture {
     justify-content: space-between;
     padding: 2rem;
     background-color: #f5fbff;
+    border-radius: 10px;
 }
 
 .card .texts h4 {
@@ -192,4 +194,27 @@ img#profile-picture {
 
 .card .icons {
     align-self: flex-end;
+}
+
+.timeline {
+    display: grid;
+    grid-template-rows: 60px 1fr 60px 1fr;
+}
+
+.announcements {
+    background-color: #f5fbff;
+    height: 500px;
+    width: 80%;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+}
+
+.trending {
+    background-color: #f5fbff;
+    height: 400px;
+    width: 80%;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    border-radius: 10px;
 }
